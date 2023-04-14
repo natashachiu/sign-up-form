@@ -12,3 +12,6 @@ Practice with making forms
 * More use of pseudo-classes `:focus`, `:invalid`,
 * Using system font stack and custom CSS properties
 * Media queries for mobile responsiveness
+
+## References:
+- Odin Project Sign-up form [solution](https://arturopstem.github.io/sign-up-form/)
