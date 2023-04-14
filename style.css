@@ -1,0 +1,167 @@
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--system-ui);
+}
+.outer-container {
+    display: flex;
+    min-height: 100vh;
+    flex: 1;
+}
+
+
+.img-container {
+    background-color: rgba(255, 217, 224, 0.761);
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    max-width: 93%;
+    margin-right: auto;
+}
+.text-above-img {
+    margin-top: 115px;
+    align-self: center;
+    padding: 40px;
+    max-width: 380px;
+    color: #f85465cb;
+    font-size: 200%;
+}
+/* .img-credit {
+    margin-top: auto;
+    align-self: flex-end;
+    padding: 20px 35px;
+    font-size: 13px;
+    opacity: 75%;
+    color: gray;
+}
+.img-credit a{
+    color: gray;
+    text-decoration: underline;
+} */
+
+
+.sign-up-form-container {
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.get-started {
+    margin-bottom: 10px;
+}
+.subheading, .subtext {
+    color: gray;
+    font-weight: 550;
+    margin-left: 2px;
+}
+
+
+form {
+    padding: 34px 0;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    gap: 80px;
+}
+
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: 11px;
+    color: darkgray;
+    font-weight: 700;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+input {
+    border: 1px solid transparent;
+    background-color: rgb(241, 241, 241);
+    border-radius: 7px;
+    width: 110%;
+    padding: 12px;
+    font-size: 14px;
+}
+
+button {
+    border: 0;
+    border-radius: 7px;
+    background-color: #f85464;
+    padding: 12px 45px;
+    margin-top: 18px;
+    font-size: 15px;
+    color: white;
+}
+.subtext {
+    margin-top: -20px;
+}
+a {
+    color: #f85464;
+    text-decoration: none;
+}
+
+
+
+input:focus {
+    background-color: white;
+    outline: 1px solid darkgray;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input:focus:invalid {
+    outline: 1px solid red;
+}
+input[type='email']::placeholder {
+    color: lightgray;
+}
+a:hover {
+    cursor: pointer;
+}
+
+div.error::after {
+    visibility: hidden;
+    content: "* Passwords do not match.";
+    color: red;
+    font-size: 12px;
+    margin-left: 4px;
+}
+input[type="password"].error {
+    outline: 1px solid red;
+}
+input[type="password"].error + div.error::after {
+    visibility: visible;
+}
+
+
+
+@media only screen and (max-width: 915px) {
+    .outer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-above-img {
+        margin-top: 30px;
+    }
+
+    .sign-up-form-container {
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .form-input {
+        padding-right: 5px;
+    }
+    .form-row {
+        gap: 20px;
+    }
+    input {
+        width: 90%;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="img-container">
+            <h1 class="text-above-img">Discover & host podcasts for free with our intuitive yet powerful tools.</h1>
+            <img src="./audio-convo.svg" alt="vector img of podcast">
+            <!-- <div class="img-credit">Illustration by <a href="https://undraw.co/">Katerina Limpitsouni</a> on <a href="https://undraw.co/illustrations">unDraw</a></div> -->
+        </div>
+        <div class="sign-up-form-container">
+            <h1 class="get-started">Get started</h1>
+            <div class="subheading">Create your account now</div>
+            
+            <form action="" method="post">
+
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="first-name">FIRST NAME</label>
+                        <input 
+                            type="text" 
+                            id="first-name" 
+                            name="first-name" 
+                            autocapitalize="words"
+                            required>
+                    </div>
+                    <div class="form-input">
+                        <label for="last-name">LAST NAME</label>
+                        <input 
+                            type="text" 
+                            id="last-name" 
+                            name="last-name"                            autocapitalize="words">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="email">EMAIL</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="joe@example.com" 
+                            required>
+                    </div>
+                    <div class="form-input">
+                        <label for="phone-num">PHONE NUMBER</label>
+                        <input 
+                            type="tel" 
+                            id="phone-num" 
+                            name="phone-num" 
+                            pattern="^(?=.*\d).{8,12}$" 
+                            title="Enter a valid phone number.">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="password">PASSWORD</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            pattern="^.{8,32}$" 
+                            title="Password must be at least 8 characters in length." 
+                            required>
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-input">
+                        <label for="conf-password">CONFIRM PASSWORD</label>
+                        <input 
+                        type="password" 
+                        id="conf-password" 
+                        name="conf-password" 
+                        required>
+                    </div>
+                </div>
+
+                <div class='form-row'>
+                    <button type="submit">Create Account</button>
+                </div>
+                
+            </form>
+
+            <div class="subtext">Already have an account? <a href="">Log in</a></div>
+        </div>
+    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
