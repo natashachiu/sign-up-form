@@ -22,14 +22,12 @@ function checkPasswords() {
     if (pw !== conf_pw) {
         password.classList.add("error");
         conf_password.classList.add("error");
-        error_msg.classList.add("error");
         return;
     }
 
     if (pw === conf_pw) {
         password.classList.remove("error");
         conf_password.classList.remove("error");
-        error_msg.classList.remove("error");
         return;
     }
 }
