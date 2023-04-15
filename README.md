@@ -13,5 +13,8 @@ Practice with making forms
 * Using system font stack and custom CSS properties
 * Media queries for mobile responsiveness
 
+## Limitations:
+* Could only display one type of error message under each input using `::after`
+
 ## References:
 - Odin Project Sign-up form [solution](https://arturopstem.github.io/sign-up-form/)

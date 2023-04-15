@@ -29,13 +29,15 @@
                             name="first-name" 
                             autocapitalize="words"
                             required>
+                        <div class="req-error-msg"></div>
+
                     </div>
                     <div class="form-input">
                         <label for="last-name">LAST NAME</label>
                         <input 
                             type="text" 
                             id="last-name" 
-                            name="last-name"                            autocapitalize="words">
+                            name="last-name"                    autocapitalize="words">
                     </div>
                 </div>
 
@@ -48,6 +50,7 @@
                             name="email" 
                             placeholder="joe@example.com" 
                             required>
+                        <div class="req-error-msg"></div>
                     </div>
                     <div class="form-input">
                         <label for="phone-num">PHONE NUMBER</label>
@@ -70,15 +73,16 @@
                             pattern="^.{8,32}$" 
                             title="Password must be at least 8 characters in length." 
                             required>
-                        <div class="error-msg"></div>
+                        <div class="length-error-msg"></div>
                     </div>
                     <div class="form-input">
                         <label for="conf-password">CONFIRM PASSWORD</label>
                         <input 
-                        type="password" 
-                        id="conf-password" 
-                        name="conf-password" 
-                        required>
+                            type="password" 
+                            id="conf-password" 
+                            name="conf-password" 
+                            required>
+                        <div class="psw-error-msg"></div>
                     </div>
                 </div>
 

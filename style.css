@@ -87,7 +87,7 @@ input {
     border: 1px solid transparent;
     background-color: rgb(241, 241, 241);
     border-radius: 7px;
-    width: 110%;
+    width: 115%;
     padding: 12px;
     font-size: 14px;
 }
@@ -126,20 +126,37 @@ button:hover, a:hover {
     cursor: pointer;
 }
 
-.error-msg::after {
+.psw-error-msg::after, 
+.req-error-msg::after, 
+.length-error-msg::after {
     visibility: hidden;
-    content: "* Passwords do not match.";
     color: red;
     font-size: 12px;
     margin-left: 4px;
 }
+.psw-error-msg::after {
+    content: "* Passwords do not match.";
+}
 input[type="password"].error {
     outline: 1px solid red;
 }
-input[type="password"].error + .error-msg::after {
+input[type="password"].error + .psw-error-msg::after {
     visibility: visible;
 }
 
+.req-error-msg::after {
+    content: "* Required field.";
+}
+input[required].req_error + .req-error-msg::after {
+    visibility: visible;
+}
+
+.length-error-msg::after {
+    content: "*8 or more characters.";
+}
+#password.length_error + .length-error-msg::after {
+    visibility: visible;
+}
 
 button:hover {
     background-color: #f8394c;
@@ -171,9 +188,9 @@ button:active {
         padding-right: 5px;
     }
     .form-row {
-        gap: 20px;
+        gap: 40px;
     }
     input {
-        width: 90%;
+        width: 100%;
     }
 }
